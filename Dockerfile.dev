@@ -1,0 +1,20 @@
+FROM node:14-alpine as builder
+
+ARG REACT_APP_API_BASE_URL
+
+ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
+ENV EXTEND_ESLINT=true
+ENV ESLINT_NO_DEV_ERRORS=true
+
+WORKDIR /app
+
+COPY package.json yarn.lock ./
+RUN apk update && apk add python2 make g++ && rm -rf /var/cache/apk/
+RUN apk add --no-cache git
+RUN yarn install --production=false
+RUN apk del python make g++ git
+COPY . ./
+
+EXPOSE 3000
+
+CMD ["yarn", "run", "dev"]

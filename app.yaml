@@ -1,0 +1,47 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-karkee-dashboard
+spec:
+  type: NodePort
+  ports:
+    - name: service-karkee-dashboard
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: karkee-dashboard
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karkee-dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karkee-dashboard
+  template:
+    metadata:
+      labels:
+        app: karkee-dashboard
+    spec:
+      containers:
+        - name: karkee-dashboard
+          image: gcr.io/elaborate-chess-313504/karkee-dashboard:latest
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+            periodSeconds: 1
+            timeoutSeconds: 1
+            successThreshold: 1
+            failureThreshold: 10
+            initialDelaySeconds: 5
+          env:
+            - name: PORT
+              value: '80'

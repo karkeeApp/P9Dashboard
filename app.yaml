@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: karkee-dashboard
-          image: gcr.io/elaborate-chess-313504/karkee-dashboard:latest
+          image: gcr.io/agile-infinity-329404/p9-dashboard:latest
           ports:
             - containerPort: 80
           readinessProbe:

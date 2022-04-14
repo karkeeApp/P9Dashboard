@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   FC,
   memo,
@@ -371,3 +372,4 @@ const AdminListView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default memo(AdminListView);
+/* eslint-enable */

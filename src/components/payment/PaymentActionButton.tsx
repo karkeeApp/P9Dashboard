@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Menu, Space, Modal } from 'antd';
@@ -270,3 +271,4 @@ const PaymentActionButton: FC<PaymentActionButtonProps> = ({
 };
 
 export default PaymentActionButton;
+/* eslint-enable */

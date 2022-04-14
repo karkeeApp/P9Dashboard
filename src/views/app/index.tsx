@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, lazy, Suspense, memo, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { Switch, Route, RouteComponentProps } from 'react-router-dom';
@@ -314,3 +315,4 @@ const AppView: FC<RouteComponentProps> = ({ location }) => {
 };
 
 export default memo(AppView);
+/* eslint-enable */

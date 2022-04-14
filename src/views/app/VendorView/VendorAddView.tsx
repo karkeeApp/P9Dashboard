@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import {
@@ -449,3 +450,4 @@ const VendorAddView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default VendorAddView;
+/* eslint-enable */

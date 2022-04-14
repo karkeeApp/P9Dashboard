@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState, useEffect, useCallback } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import {
@@ -465,3 +466,4 @@ const AdminEditView: FC<RouteComponentProps<{ id: string }>> = ({
 };
 
 export default AdminEditView;
+/* eslint-enable */

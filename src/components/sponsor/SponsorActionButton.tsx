@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Menu, Space, Modal } from 'antd';
@@ -415,3 +416,4 @@ const SponsorActionButton: FC<SponsorActionButtonProps> = ({
 };
 
 export default SponsorActionButton;
+/* eslint-enable */

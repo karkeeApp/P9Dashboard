@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState, useEffect, CSSProperties } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -201,3 +202,4 @@ const SignInView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default SignInView;
+/* eslint-enable */

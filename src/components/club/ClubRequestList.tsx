@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, ChangeEventHandler } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
@@ -202,3 +203,4 @@ const ClubRequestList: FC<ClubRequestListProps> = ({
 };
 
 export default ClubRequestList;
+/* eslint-enable */

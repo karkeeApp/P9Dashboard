@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, memo, useState, useEffect, useCallback } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Tooltip, Button, Tabs, TabsProps } from 'antd';
@@ -135,3 +136,4 @@ const PaymentDetailsView: FC<RouteComponentProps<{ id: string }>> = ({
 };
 
 export default memo(PaymentDetailsView);
+/* eslint-enable */

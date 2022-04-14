@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Menu, Space, Modal, notification } from 'antd';
@@ -128,3 +129,4 @@ const EventActionButton: FC<EventActionButtonProps> = ({ event, onRemove }) => {
 };
 
 export default EventActionButton;
+/* eslint-enable */

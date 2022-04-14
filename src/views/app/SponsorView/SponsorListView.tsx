@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   FC,
   memo,
@@ -366,3 +367,4 @@ const SponsorListView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default memo(SponsorListView);
+/* eslint-enable */

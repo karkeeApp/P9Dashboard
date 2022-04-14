@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState, useEffect, useCallback } from 'react';
 import {
   Row,
@@ -235,3 +236,4 @@ const AdminGeneralForm: FC<AdminGeneralFormProps> = ({
 };
 
 export default AdminGeneralForm;
+/* eslint-enable */

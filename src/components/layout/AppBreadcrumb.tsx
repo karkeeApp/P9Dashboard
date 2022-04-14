@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { PureComponent } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
@@ -54,3 +55,4 @@ export class AppBreadcrumb extends PureComponent {
 }
 
 export default AppBreadcrumb;
+/* eslint-enable */

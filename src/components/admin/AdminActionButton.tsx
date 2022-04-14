@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Menu, Space, Modal, notification } from 'antd';
@@ -155,3 +156,4 @@ const AdminActionButton: FC<AdminActionButtonProps> = ({ admin, onRemove }) => {
 };
 
 export default AdminActionButton;
+/* eslint-enable */

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Menu, Spin } from 'antd';
@@ -145,3 +146,4 @@ const EventAttendeeActionButton: FC<EventAttendeeActionButtonProps> = ({
 };
 
 export default EventAttendeeActionButton;
+/* eslint-enable */

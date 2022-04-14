@@ -1,40 +1,34 @@
-FROM node:14-alpine as build
+FROM node:latest as websbbuild
 
-ARG API_BASE_URL
+ARG NODE_ENV=staging
+ARG NODE_SERVER_PORT=80
+ARG REACT_APP_API_BASE_URL=https://staging.api.p9.karkee.biz/
+ARG PUBLIC_URL=https://staging.dashbard.karkee.biz
+ENV NODE_ENV=${NODE_ENV}
+ENV NODE_SERVER_PORT=${NODE_SERVER_PORT}
+ENV REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
+ENV PUBLIC_URL=${PUBLIC_URL}
 
-ENV REACT_APP_API_BASE_URL=$API_BASE_URL
+RUN apt-get update && apt-get install vim curl tree gcc g++ make python -y
 
-WORKDIR /app
+COPY . /app/.
 
-COPY package.json yarn.lock ./
-
-RUN apk update && apk add python2 make g++ && rm -rf /var/cache/apk/
-RUN apk add --no-cache git
-RUN yarn install --production=false
-COPY . ./
+RUN yarn
 RUN yarn build
 
-# Production Environment
+RUN rm -fR /var/cache/apk/*
 
-FROM nginx:1.15.2-alpine
+FROM nginx
 
-COPY --from=build /app/build /usr/share/nginx/html
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
-RUN echo $'server { \n\
-    listen 80; \n\
-    location / { \n\
-    root /usr/share/nginx/html; \n\
-    index index.html index.htm; \n\
-    try_files $uri $uri/ /index.html;\n\
-    }\n\
-    location /healthz {\n\
-    add_header Content-Type text/plain;\n\
-    return 200 "Dashboard react app health check";\n\
-    }\n\
-    }' > /etc/nginx/conf.d/default.conf
+COPY --from=websbbuild /app/build /usr/share/nginx/html
 
-EXPOSE 80
+RUN mkdir /usr/share/nginx/html/healthz
+RUN echo "OK" > /usr/share/nginx/html/healthz/index.html
 
-WORKDIR /usr/share/nginx/html
+EXPOSE ${NODE_SERVER_PORT}
+
+WORKDIR /var/www/html
 
 CMD ["nginx","-g","daemon off;"]

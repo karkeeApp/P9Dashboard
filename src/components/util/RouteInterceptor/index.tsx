@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC } from 'react';
 import { Route, RouteProps, Redirect } from 'react-router-dom';
 
@@ -31,3 +32,4 @@ export const RouteInterceptor: FC<RouteInterceptorProps> = ({
 );
 
 export default RouteInterceptor;
+/* eslint-enable */

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   FC,
   memo,
@@ -302,3 +303,4 @@ const ListingListView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default memo(ListingListView);
+/* eslint-enable */

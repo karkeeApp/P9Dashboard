@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState, useEffect, useCallback } from 'react';
 import { Route, RouteComponentProps, Switch, Redirect } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -166,3 +167,4 @@ export const Views: FC<RouteComponentProps> = ({
 };
 
 export default Views;
+/* eslint-enable */

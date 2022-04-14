@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   FC,
   memo,
@@ -284,3 +285,4 @@ const BannerListView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default memo(BannerListView);
+/* eslint-enable */

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, memo, useState, useEffect, useCallback } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Tooltip, Button, Tabs, TabsProps, notification } from 'antd';
@@ -257,3 +258,4 @@ const MemberDetailsView: FC<RouteComponentProps<{ id: string }>> = ({
 };
 
 export default memo(MemberDetailsView);
+/* eslint-enable */

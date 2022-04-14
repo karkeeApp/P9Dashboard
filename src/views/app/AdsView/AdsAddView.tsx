@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState, useEffect } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Form, FormProps, Button, Tabs, TabsProps, notification } from 'antd';
@@ -186,3 +187,4 @@ const AdsAddView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default AdsAddView;
+/* eslint-enable */

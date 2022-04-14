@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useMemo } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Menu, Dropdown, Avatar, Skeleton } from 'antd';
@@ -160,3 +161,4 @@ const NavProfile: FC = () => {
 };
 
 export default NavProfile;
+/* eslint-enable */

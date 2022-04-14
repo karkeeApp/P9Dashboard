@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FC, useState, useEffect, useCallback } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Form, FormProps, Button, Tabs, TabsProps, notification } from 'antd';
@@ -319,3 +320,4 @@ const EventEditView: FC<RouteComponentProps<{ id: string }>> = ({
 };
 
 export default EventEditView;
+/* eslint-enable */

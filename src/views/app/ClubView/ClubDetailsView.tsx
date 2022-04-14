@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   FC,
   memo,
@@ -645,3 +646,4 @@ const ClubDetailsView: FC<RouteComponentProps<{ id: string }>> = ({
 };
 
 export default memo(ClubDetailsView);
+/* eslint-enable */

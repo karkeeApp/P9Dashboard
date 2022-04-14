@@ -18,8 +18,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "allowSyntheticDefaultImports": true,
-    "@typescript-eslint/no-unsafe-assignment": "error"
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"],
   "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]

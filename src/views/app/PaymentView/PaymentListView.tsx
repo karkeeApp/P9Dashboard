@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   FC,
   memo,
@@ -386,3 +387,4 @@ const PaymentListView: FC<RouteComponentProps> = ({ history }) => {
 };
 
 export default memo(PaymentListView);
+/* eslint-enable */

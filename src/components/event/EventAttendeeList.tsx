@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   FC,
   useState,
@@ -235,3 +236,4 @@ const EventAttendeeList: FC<EventAttendeeListProps> = ({ event }) => {
 };
 
 export default EventAttendeeList;
+/* eslint-enable */

@@ -4,9 +4,9 @@ steps:
       [
         "build",
         "-t",
-        "gcr.io/$PROJECT_ID/karkee-dashboard-staging:$SHORT_SHA",
+        "gcr.io/$PROJECT_ID/p9-dashboard-staging:$SHORT_SHA",
         "-t",
-        "gcr.io/$PROJECT_ID/karkee-dashboard-staging:latest",
+        "gcr.io/$PROJECT_ID/p9-dashboard-staging:latest",
         "--build-arg",
         "API_BASE_URL=$_API_BASE_URL",
         ".",
@@ -22,16 +22,16 @@ steps:
         "set",
         "image",
         "deployment",
-        "karkee-dashboard-staging",
-        "karkee-dashboard-staging=gcr.io/$PROJECT_ID/karkee-dashboard-staging:$SHORT_SHA",
+        "p9-dashboard-staging",
+        "p9-dashboard-staging=gcr.io/$PROJECT_ID/p9-dashboard-staging:$SHORT_SHA",
       ]
     env:
       - "CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a"
       - "CLOUDSDK_CONTAINER_CLUSTER=solveware"
 images:
   [
-    "gcr.io/$PROJECT_ID/karkee-dashboard-staging:$SHORT_SHA",
-    "gcr.io/$PROJECT_ID/karkee-dashboard-staging:latest",
+    "gcr.io/$PROJECT_ID/p9-dashboard-staging:$SHORT_SHA",
+    "gcr.io/$PROJECT_ID/p9-dashboard-staging:latest",
   ]
 timeout: 900s
 options:

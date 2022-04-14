@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install vim curl tree gcc g++ make python -y
 
 COPY . /app/.
 
+WORKDIR /app
+
 RUN yarn
 RUN yarn build
 
@@ -22,10 +24,10 @@ FROM nginx
 
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=websbbuild /app/build /usr/share/nginx/html
+COPY --from=websbbuild /app/build /var/www/html
 
-RUN mkdir /usr/share/nginx/html/healthz
-RUN echo "OK" > /usr/share/nginx/html/healthz/index.html
+RUN mkdir /var/www/html/healthz
+RUN echo "OK" > /var/www/html/healthz/index.html
 
 EXPOSE ${NODE_SERVER_PORT}
 

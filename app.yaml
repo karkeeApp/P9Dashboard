@@ -17,19 +17,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: karkee-dashboard
+  name: p9-dashboard
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: karkee-dashboard
+      app: p9-dashboard
   template:
     metadata:
       labels:
-        app: karkee-dashboard
+        app: p9-dashboard
     spec:
       containers:
-        - name: karkee-dashboard
+        - name: p9-dashboard
           image: gcr.io/agile-infinity-329404/p9-dashboard:latest
           ports:
             - containerPort: 80

@@ -34,8 +34,8 @@ navigationConfig.forEach((elm) => {
 
 const BreadcrumbRoute = withRouter((props) => {
   const { location } = props;
-  const pathSnippets = location.pathname.split('/').filter((i) => i);
-  const buildBreadcrumb = pathSnippets.map((_, index) => {
+  const pathSnippets = location.pathname.split('/').filter((i: any) => i);
+  const buildBreadcrumb = pathSnippets.map((_: any, index: number) => {
     const url = `/${pathSnippets.slice(0, index + 1).join('/')}`;
     return (
       <Breadcrumb.Item key={url}>

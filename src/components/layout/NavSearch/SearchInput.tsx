@@ -118,7 +118,7 @@ const SearchInput: FC<SearchInputProps> = ({
 }) => {
   const [value, setValue] = useState<string>('');
   const [options, setOptions] = useState<AutoCompleteProps['options']>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement | any>(null);
 
   const onSelect = (): void => {
     setValue('');

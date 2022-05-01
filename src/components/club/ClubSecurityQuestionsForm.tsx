@@ -22,7 +22,7 @@ const ClubSecurityQuestionsForm: FC<ClubSecurityQuestionsFormProps> = ({
                       <Form.Item
                         {...field}
                         name={[field.name, 'question']}
-                        fieldKey={[field.fieldKey, 'question']}
+                        fieldKey={[field.key, 'question']}
                         label='Question'
                         rules={[
                           {
@@ -37,7 +37,7 @@ const ClubSecurityQuestionsForm: FC<ClubSecurityQuestionsFormProps> = ({
                       <Form.Item
                         {...field}
                         name={[field.name, 'is_file_upload']}
-                        fieldKey={[field.fieldKey, 'is_file_upload']}
+                        fieldKey={[field.key, 'is_file_upload']}
                         label='Requires File Upload?'
                         valuePropName='checked'
                       >

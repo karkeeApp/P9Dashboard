@@ -90,7 +90,7 @@ export const Logo: FC<LogoProps> = ({ mobileLogo }) => {
       }}
     >
       <img
-        src='/img/karkee-logo.png'
+        src='/img/p9-logo.png'
         alt={`${APP_NAME} logo`}
         style={{
           maxWidth: '100%',

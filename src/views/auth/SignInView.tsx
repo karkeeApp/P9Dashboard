@@ -89,7 +89,7 @@ const SignInView: FC<RouteComponentProps> = ({ history }) => {
                     //     ? 'logo.png'
                     //     : 'logo-white.png'
                     // }`}
-                    src='/img/karkee-logo.png'
+                    src='/img/p9-logo.png'
                     alt={`${APP_NAME} logo`}
                   />
                   {/* <p>
